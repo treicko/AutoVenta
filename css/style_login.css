@@ -1,0 +1,88 @@
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
+html { 
+	height: 100%; 	 
+}
+
+
+body { 	
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:13px; 
+	background-color: #FFFFFF;/* color de fondo de la pagina*/	 
+}
+
+h1 {	
+	font-size:20px;
+	text-align:center;
+	padding-top: 30px;
+}
+
+form { 
+	margin: auto; 
+	width: 350px; 
+	padding-bottom: 20px;
+}
+
+fieldset { 
+	margin: 0 0 22px 0; 
+	border: 1px solid  #ddd; 
+	padding: 30px 17px; 
+	background-color: #333;/* Color de fondo del formulario*/
+  	-moz-border-radius:10px;  
+  	border-radius: 10px;  
+  	-webkit-border-radius: 10px; 
+}
+
+
+label.float { 
+	float: left; 
+	display: block; 
+	width: 260px; 
+	margin: 4px 0 0 0; 
+	clear: left; 
+	color:#FFF;/* Color del Texto del formulario*/ 
+}
+
+label { 
+	display: block; 
+	width: auto; 
+	margin: 0 0 10px 0; 
+}
+
+label.spam-protection { 
+	display: inline; 
+	width: auto; 
+	margin: 0; 
+}
+
+
+
+input.inp-text, textarea, input.choose, input.answer { 
+	border: 1px solid #909090; 
+	padding: 3px; 
+}
+
+input.inp-text { 
+	width: 300px; 
+	margin: 0 0 8px 0; 
+}
+
+#logo {
+	text-align:center;
+	padding-top:5px;
+}
+.boton{
+	float:right;
+	width:100px;
+	height:30px;
+	padding-right:2px;
+	margin-right:18px;
+	background:#333;/*color del botton*/
+	color:#FFF;
+}
+.boton:hover{
+	color:# F00;
+}
