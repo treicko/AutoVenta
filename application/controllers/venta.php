@@ -81,8 +81,8 @@ class Venta extends CI_Controller {
 				'marca'=> $this->input->post('marca'),
 				'modelo'=> $this->input->post('modelo'),
 				'precio'=> $this->input->post('precio'),
-				
-				'fecha'=> $this->input->post('fecha')
+				#date("Y-m-d H:i:s"); 
+				'fecha'=> date("Y-m-d H:i:s") 
 			);
 			$ci=$this->input->post('usuario_ci');
 			$this->load->model('vehiculo_model');
@@ -122,13 +122,17 @@ class Venta extends CI_Controller {
 
 	public function getPlacaVehiculo()
 	{
-		$data['nombre'] = $this->session->userdata('nombre');
 		$this->load->helper('form');
 		$this->load->model('vehiculo_model');
+		$this->load->model('user_model');
+
+		$nombre_usuario_sesion = $this->session->userdata('nombre');
+		$data['nombre'] = $nombre_usuario_sesion;
+
 		$auto=$this->input->post('placa');
 		
 
-
+		$data['vendedor'] = $this->user_model->get_one_user_by_name($nombre_usuario_sesion);
 		//$data['cliente']=$this->user_model->get_one_user_ci($cliente);
 		$data['auto']=$this->vehiculo_model->get_one_vehiculo_placa($auto);
 

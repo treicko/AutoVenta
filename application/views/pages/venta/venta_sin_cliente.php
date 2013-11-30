@@ -29,13 +29,13 @@
         <LABEL><H2>VENDEDOR</H2></LABEL>
         
 
-        <label>
+         <label>
             <span>NOMBRE</span>
-            <input type="text" class="input_text" name="usuario_nombres" required="required"/>
+            <input   disabled=true type="text" class="input_text" name="usuario_nombres" value="<?php echo $nombre; ?>" required="required" />
         </label>
         <label>
             <span>CI</span>
-            <input type="text" class="input_text" name="usuario_ci" required="required"/>
+            <input   disabled=true type="text" class="input_text" name="usuario_ci" value="<?php echo $vendedor['ci']; ?>" required="required"/>
         </label>
 
         <label><h2>VEHICULO</h2></label>
@@ -43,28 +43,25 @@
 
         <label>
             <span>PLACA</span>
-            <input type="text" class="input_text" name="placa" required="required"/>
+            <input   disabled=true type="text" class="input_text" name="placa" value="<?php echo $auto['placa'];?>"required="required"/>
         </label>
         <label>
             <span>MARCA</span>
-            <input type="text" class="input_text" name="marca" required="required"/>
+            <input   disabled=true type="text" class="input_text" name="marca" value="<?php echo $auto['marca'];?>" required="required"/>
         </label>
         <label>
             <span>MODELO</span>
-            <input type="text" class="input_text" name="modelo" required="required"/>
+            <input disabled=true type="text" class="input_text" name="modelo" value="<?php echo $auto['modelo'];?>" required="required"/>
         </label>
         <label>
             <span>PRECIO</span>
-            <input type="text" class="input_text" name="precio" required="required"/>
+            <input disabled=true type="text" class="input_text" name="precio" value="<?php echo $auto['precio'];?>" required="required"/>
         </label>
 
         <label>
             <span>FECHA</span>
             <input type="date" class="input_text" name="fecha" required="required"/>
         </label>
-
-
-        
 
         <label>
             <input type="reset" class="button" value="RESET">

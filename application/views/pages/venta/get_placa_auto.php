@@ -1,4 +1,4 @@
-<h1>registro con cliente</h1>
+<h1>registro Sin cliente</h1>
 
     <?php echo form_open("venta/getPlacaVehiculo");?>
     <div class="box">

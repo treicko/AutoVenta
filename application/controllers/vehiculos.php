@@ -59,7 +59,8 @@ class Vehiculos extends CI_Controller {
 				'placa'=> $this->input->post('placa'),
 				'modelo'=> $this->input->post('modelo'),
 				'marca'=> $this->input->post('marca'),
-				'precio'=> $this->input->post('precio')
+				'precio'=> $this->input->post('precio'),
+				'estado' => true
 			);
 			$this->vehiculo_model->insert_vehiculo($vehiculo);
 			$this->ver_vehiculos();
