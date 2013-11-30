@@ -21,27 +21,27 @@ class Acerca_de extends CI_Controller {
 	{
 		#$this->load->view('welcome_message');
 		$data['main_content'] = 'pages/acerca_de/perfil';
-		$this->load->view('main_template', $data);
+		$this->load->view('main_template_visitantes', $data);
 	}
 
 	public function mision()
 	{
 		#$this->load->view('welcome_message');
 		$data['main_content'] = 'pages/acerca_de/mision';
-		$this->load->view('main_template', $data);
+		$this->load->view('main_template_visitantes', $data);
 	}
 
 	public function vision()
 	{
 		#$this->load->view('welcome_message');
 		$data['main_content'] = 'pages/acerca_de/vision';
-		$this->load->view('main_template', $data);
+		$this->load->view('main_template_visitantes', $data);
 	}
 
 	public function objetivos()
 	{
 		#$this->load->view('welcome_message');
 		$data['main_content'] = 'pages/acerca_de/objetivos';
-		$this->load->view('main_template', $data);
+		$this->load->view('main_template_visitantes', $data);
 	}
 }

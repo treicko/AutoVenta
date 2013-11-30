@@ -1,14 +1,3 @@
-<!--<div id="botonera">
-	<ul id="menu">
-	<li><a href="<?php #echo base_url(); ?>index.php/vehiculos/ver_vehiculos">Vehiculo</a></li> 
-      
-    <li><a href="#">Clientes</a></li>
-    <li><a href="#">Ventas</a></li>
-    <li><a href="#">prueba</a></li>
-    
-	<li><a href="<?php #echo base_url(); ?>index.php/usuarios/logout_user">Cerrar Sesi&oacute;n</a></li>
-</ul>
-</div>-->
 
 <div id="content">
 

@@ -17,6 +17,11 @@ class vehiculo_model extends CI_Model
 		$query= $this->db->query("select * from vehiculo where Id_vehiculo='$id'");
 		return $query->row_array();
 	}
+	public function get_one_vehiculo_placa($id)
+	{
+		$query= $this->db->query("select * from vehiculo where placa='$id'");
+		return $query->row_array();
+	}
 
 	public function insert_vehiculo($client)
 	{		
@@ -36,5 +41,16 @@ class vehiculo_model extends CI_Model
 			return true;
 		else
 			return false;
+	}
+	public function cambiarEstadoVehiculoVendido($id)					
+	{
+
+
+		$data=array('estado'=>0);
+		$this->db->where('placa', $id);
+			$this->db->update('vehiculo', $data); 
+		
+
+
 	}
 }

@@ -7,6 +7,7 @@ class user_model extends CI_Model
 	{
 		$this->load->database();
 	}
+
 	public function login($user, $password)
 	{
 		$query= $this->db->query("select * from usuarios where usuario='$user' and password='$password' and estado='Activo'");
@@ -21,6 +22,7 @@ class user_model extends CI_Model
 			return false;
 		}
 	}
+
 	public function set_session()
 	{
 		$this->session->set_userdata(array(
@@ -32,25 +34,42 @@ class user_model extends CI_Model
 			
 		));
 	}
+
 	public function get_all_user()
 	{
 		$query = $this->db->query("select * from usuarios order by nombre asc");
 		return $query->result_array();
 	}
+
+	public function get_one_user_ci($ci)
+	{
+		$query= $this->db->query("select * from usuarios where ci='$ci'");
+		return $query->row_array();
+	}
+	
+	public function get_one_user_by_name($name)
+	{
+		$query= $this->db->query("select * from usuarios where nombre='$name'");
+		return $query->row_array();
+	}
+
 	public function get_one_user($id)
 	{
 		$query= $this->db->query("select * from usuarios where id='$id'");
 		return $query->row_array();
 	}	
+
 	public function insert_user($user)
 	{		
 		$this->db->insert('usuarios',$user);
 	}
+
 	public function update_user($user, $id)
 	{		
 		$this->db->where('id', $id);
 		$this->db->update('usuarios',$user);
 	}
+	
 	public function delete_user($id)
 	{
 		$this->db->where('id',$id);

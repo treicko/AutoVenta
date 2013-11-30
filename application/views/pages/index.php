@@ -1,16 +1,3 @@
-
-  <div class="container">  
-    <div class="splash">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>INB Automotores SRL </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 <div class="section-tout">
   <div class="container">
 

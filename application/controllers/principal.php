@@ -1,6 +1,6 @@
 <?php 
 
-class principal extends CI_Controller {
+class Principal extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,9 +21,9 @@ class principal extends CI_Controller {
   	{
     	parent::__construct();
 
-    	if( !$this->session->userdata('isLoggedIn') ) {
-        	redirect('usuarios/show_login');
-    	}
+    	//if( !$this->session->userdata('isLoggedIn') ) {
+        //	redirect('usuarios/show_login');
+    	//}
   	}
 	public function index()
 	{
@@ -33,8 +33,40 @@ class principal extends CI_Controller {
 		#$data['password']= $this->session->userdata('password');
 		#$data['nombre']= $this->session->userdata('nombre');		
 		$data['main_content'] = 'pages/index';
-		$this->load->view('main_template', $data);
+		//$this->load->view('main_template', $data);
+		$this->load->view('main_template_visitantes', $data);
 	}
+
+	public function index_Cliente()
+	{
+		//$data['user']= $this->session->userdata('usuario');
+		$data['nombre']= $this->session->userdata('nombre');
+		//printf($data['user']);
+		$data['main_content'] = 'pages/index';
+		//$this->load->view('main_template', $data);
+		$this->load->view('main_template_clientes', $data);
+	}
+
+	public function index_Vendedor()
+	{
+		//$data['user']= $this->session->userdata('usuario');
+		$data['nombre']= $this->session->userdata('nombre');
+		//printf($data['user']);
+		$data['main_content'] = 'pages/index';
+		//$this->load->view('main_template', $data);
+		$this->load->view('main_template_vendedores', $data);
+	}
+
+	public function index_Administrador()
+	{
+		//$data['user']= $this->session->userdata('usuario');
+		$data['nombre']= $this->session->userdata('nombre');
+		//printf($data['user']);
+		$data['main_content'] = 'pages/index';
+		//$this->load->view('main_template', $data);
+		$this->load->view('main_template_administrador', $data);
+	}
+
 	/*public function view($page = 'home')
 	{
 		if ( ! file_exists('application/views/pages/'.$page.'.php'))
